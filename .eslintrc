@@ -1,0 +1,42 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:promise/recommended"
+  ],
+  "plugins": [
+    "optimize-regex",
+    "no-use-extend-native",
+    "promise"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "packageDir": "./"
+      }
+    ],
+    "allowTernary": true,
+    "allowShortCircuit": true,
+    "no-use-extend-native/no-use-extend-native": 2,
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "$": true,
+    "jQuery": true
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}

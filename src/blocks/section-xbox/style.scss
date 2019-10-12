@@ -1,0 +1,39 @@
+.section-xbox {
+  margin: 500px 0;
+  padding: 150px 0;
+  background: #cdc9ca;
+
+  &::after {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #000;
+  }
+
+  #{&} {
+    &__head {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 2em;
+      color: #000;
+      span {
+        font-weight: bold;
+      }
+    }
+    &__img {
+      font-size: 0;
+      line-height: 0;
+      margin: 30px auto;
+      canvas {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

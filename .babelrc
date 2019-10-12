@@ -1,0 +1,18 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "useBuiltIns": "entry",
+      "targets": {
+        "ie": "11"
+      }
+    }]
+  ],
+  "ignore": [
+    "./node_modules"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-classes",
+    "transform-object-assign",
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+}

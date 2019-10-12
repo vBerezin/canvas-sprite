@@ -1,0 +1,13 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": null,
+    "declaration-empty-line-before": "never",
+    "rule-empty-line-before": [ "always-multi-line", {
+      "ignore": ["inside-block"]
+    } ],
+    "at-rule-empty-line-before": [ "always", {
+      "ignore": ["inside-block", "blockless-after-same-name-blockless"]
+    }]
+  }
+}

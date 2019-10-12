@@ -1,15 +1,14 @@
 ## рисование спрайта в canvas
 
-### dev server
+dev server
 ```shell
 gulp
 ```
 
-### build
+build
 ```shell
 gulp build
 ```
-#### Опции
 продакшн:
 ```shell
 --prod
