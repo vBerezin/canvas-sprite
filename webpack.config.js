@@ -32,17 +32,12 @@ const config = {
         common: {
           name: 'common',
           chunks: 'initial',
-        }
-      }
+          minChunks: 2,
+        },
+      },
     },
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      'window.$': 'jquery',
-    }),
     new webpack.DefinePlugin({
       DEV_ENV: !ARGV.prod,
     }),
