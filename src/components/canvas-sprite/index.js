@@ -1,13 +1,13 @@
 export default function CanvasSprite(node, imgSrc, count) {
   this.canvas = node;
   this.currentFrame = 0;
+  this.onLoad = null;
+  this.onError = null;
   const sprite = new Image();
   const framesCount = +count;
   const ctx = this.canvas.getContext('2d');
-  sprite.src = imgSrc;
-  this.onLoad = null;
-  this.onError = null;
   let interval;
+  sprite.src = imgSrc;
   this.render = (frameIndex = 0) => {
     const { frameHeight, frameWidth, canvas: { width, height } } = this;
     let spriteLeft = 0;
