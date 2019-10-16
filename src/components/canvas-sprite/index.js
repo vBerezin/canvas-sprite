@@ -7,7 +7,6 @@ export default function CanvasSprite(node, imgSrc, count) {
   const framesCount = +count;
   const ctx = this.canvas.getContext('2d');
   let interval;
-  sprite.src = imgSrc;
   this.render = (frameIndex = 0) => {
     const { frameHeight, frameWidth, canvas: { width, height } } = this;
     let spriteLeft = 0;
@@ -70,4 +69,5 @@ export default function CanvasSprite(node, imgSrc, count) {
     if (typeof this.onError === 'function') return this.onError();
     throw new Error(`Sprite ${imgSrc} not loaded`);
   };
+  sprite.src = imgSrc;
 }
